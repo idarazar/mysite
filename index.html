@@ -1,38 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Apps</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body{font-family:Arial;background:#0f172a;color:#fff;margin:0}
-    header{padding:30px;text-align:center}
-    .apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px}
-    .card{background:#1e293b;padding:20px;border-radius:16px}
-    a{color:#38bdf8;text-decoration:none}
-    footer{text-align:center;padding:20px;font-size:14px;color:#94a3b8}
-  </style>
+<meta charset="UTF-8">
+<title>My Android Apps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#0f172a;
+  color:#fff;
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 40px;
+  background:#020617;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+nav h2{margin:0;font-size:20px}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+}
+nav a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-size:15px;
+}
+nav a:hover{color:#38bdf8}
+
+/* COVER */
+.cover{
+  height:260px;
+  background:linear-gradient(to right,#2563eb,#38bdf8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.cover h1{
+  font-size:36px;
+  margin:0;
+}
+
+/* APPS */
+.apps{
+  padding:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.card{
+  background:#1e293b;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+}
+.card img{
+  width:90px;
+  height:90px;
+  border-radius:20px;
+  margin-bottom:15px;
+}
+.card h3{margin:10px 0}
+.card p{
+  font-size:14px;
+  color:#cbd5f5;
+  min-height:45px;
+}
+.card a{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#38bdf8;
+  color:#020617;
+  border-radius:10px;
+  font-size:14px;
+  text-decoration:none;
+}
+.card a:hover{background:#0ea5e9}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  color:#94a3b8;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>My Android Apps</h1>
-  <p>All my apps on Google Play</p>
-</header>
+<!-- NAVBAR -->
+<nav>
+  <h2>My Apps</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
+<!-- COVER -->
+<section class="cover">
+  <h1>All My Android Apps</h1>
+</section>
+
+<!-- APPS -->
 <section class="apps">
+
+  <!-- APP 1 -->
   <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
     <h3>App Name 1</h3>
-    <a href="https://play.google.com">View on Google Play</a>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
   </div>
+
+  <!-- APP 2 -->
   <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
     <h3>App Name 2</h3>
-    <a href="https://play.google.com">View on Google Play</a>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
   </div>
+
+  <!-- APP 3 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
+    <h3>App Name 3</h3>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
+  </div>
+
+  <!-- APP 4 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
+    <h3>App Name 4</h3>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
+  </div>
+
+  <!-- APP 5 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
+    <h3>App Name 5</h3>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
+  </div>
+
+  <!-- APP 6 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
+    <h3>App Name 6</h3>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
+  </div>
+
+  <!-- APP 7 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
+    <h3>App Name 7</h3>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
+  </div>
+
+  <!-- APP 8 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
+    <h3>App Name 8</h3>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
+  </div>
+
+  <!-- APP 9 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
+    <h3>App Name 9</h3>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
+  </div>
+
+  <!-- APP 10 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/90" alt="">
+    <h3>App Name 10</h3>
+    <p>Short description about the app.</p>
+    <a href="https://play.google.com">Google Play</a>
+  </div>
+
 </section>
 
 <footer>
-  © 2025 My Apps
+© 2025 My Apps – All rights reserved
 </footer>
 
 </body>
