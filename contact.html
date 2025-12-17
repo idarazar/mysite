@@ -4,22 +4,74 @@
 <meta charset="UTF-8">
 <title>Contact Us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-body{font-family:Arial;background:#0f172a;color:#fff;margin:0;padding:30px}
-.container{max-width:900px;margin:auto}
-h1{color:#38bdf8}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#fff}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 40px;
+  background:#020617;
+  position:sticky;
+  top:0;
+}
+nav h2{margin:0;font-size:20px}
+nav ul{list-style:none;display:flex;gap:25px;margin:0;padding:0}
+nav a{color:#e5e7eb;text-decoration:none}
+nav a:hover{color:#38bdf8}
+
+/* COVER */
+.cover{
+  height:220px;
+  background:linear-gradient(to right,#2563eb,#38bdf8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cover h1{margin:0;font-size:34px}
+
+/* CONTENT */
+.content{
+  max-width:900px;
+  margin:40px auto;
+  padding:0 25px;
+}
+p{color:#cbd5f5;line-height:1.7}
+
+/* FOOTER */
+footer{text-align:center;padding:25px;color:#94a3b8;font-size:14px}
 </style>
 </head>
 
 <body>
-<div class="container">
 
-<h1>Contact Us</h1>
+<nav>
+  <h2>My Apps</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-<p>If you have any questions, feedback, or support requests, feel free to contact us.</p>
+<section class="cover">
+  <h1>Contact Us</h1>
+</section>
 
-<p>Email: <strong>email@example.com</strong></p>
+<div class="content">
+  <p>If you have any questions or support requests, feel free to contact us.</p>
 
+  <p>Email: <strong>email@example.com</strong></p>
 </div>
+
+<footer>
+© 2025 My Apps
+</footer>
+
 </body>
 </html>
