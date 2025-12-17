@@ -4,47 +4,92 @@
 <meta charset="UTF-8">
 <title>Privacy Policy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-body{font-family:Arial;background:#0f172a;color:#fff;margin:0;padding:30px}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#fff}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 40px;
+  background:#020617;
+  position:sticky;
+  top:0;
+}
+nav h2{margin:0;font-size:20px}
+nav ul{list-style:none;display:flex;gap:25px;margin:0;padding:0}
+nav a{color:#e5e7eb;text-decoration:none}
+nav a:hover{color:#38bdf8}
+
+/* COVER */
+.cover{
+  height:220px;
+  background:linear-gradient(to right,#2563eb,#38bdf8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cover h1{margin:0;font-size:34px}
+
+/* CONTENT */
+.content{
+  max-width:900px;
+  margin:40px auto;
+  padding:0 25px;
+}
+h2{color:#38bdf8}
+p,li{color:#cbd5f5;line-height:1.7}
 a{color:#38bdf8}
-.container{max-width:900px;margin:auto}
-h1,h2{color:#38bdf8}
+
+/* FOOTER */
+footer{text-align:center;padding:25px;color:#94a3b8;font-size:14px}
 </style>
 </head>
 
 <body>
-<div class="container">
 
-<h1>Privacy Policy</h1>
+<nav>
+  <h2>My Apps</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-<p>This privacy policy applies to all applications published by <strong>My Apps</strong>.</p>
+<section class="cover">
+  <h1>Privacy Policy</h1>
+</section>
 
-<h2>Information Collection and Use</h2>
-<p>We do not collect any personally identifiable information from users. Some apps may use third-party services that may collect information used to identify you.</p>
+<div class="content">
+  <p>This privacy policy applies to all applications published by <strong>My Apps</strong>.</p>
 
-<h2>Third Party Services</h2>
-<p>Our applications may use third-party services such as:</p>
-<ul>
-<li>Google AdMob</li>
-<li>Google Analytics for Firebase</li>
-</ul>
+  <h2>Information Collection and Use</h2>
+  <p>We do not collect any personally identifiable information from users. Some apps may use third-party services.</p>
 
-<h2>Log Data</h2>
-<p>In case of an error in the app, we collect data and information (through third party products) on your phone called Log Data.</p>
+  <h2>Third-Party Services</h2>
+  <ul>
+    <li>Google AdMob</li>
+    <li>Google Analytics for Firebase</li>
+  </ul>
 
-<h2>Cookies</h2>
-<p>Cookies are not explicitly used by our apps.</p>
+  <h2>Log Data</h2>
+  <p>In case of an error in the app, log data may be collected.</p>
 
-<h2>Children’s Information</h2>
-<p>These services do not address anyone under the age of 13.</p>
+  <h2>Children’s Information</h2>
+  <p>Our apps do not target children under the age of 13.</p>
 
-<h2>Changes to This Privacy Policy</h2>
-<p>We may update our Privacy Policy from time to time.</p>
-
-<h2>Contact Us</h2>
-<p>If you have any questions about this Privacy Policy, contact us at:<br>
-<strong>email@example.com</strong></p>
-
+  <h2>Contact Us</h2>
+  <p>Email: <strong>email@example.com</strong></p>
 </div>
+
+<footer>
+© 2025 My Apps
+</footer>
+
 </body>
 </html>
