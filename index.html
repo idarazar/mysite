@@ -9,7 +9,7 @@
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
   background:#0f172a;
   color:#fff;
 }
@@ -20,12 +20,14 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:16px 40px;
-  background:#020617;
+  background:rgba(2,6,23,0.95);
+  backdrop-filter:blur(10px);
   position:sticky;
   top:0;
   z-index:100;
+  box-shadow:0 4px 6px rgba(0,0,0,0.3);
 }
-nav h2{margin:0;font-size:20px}
+nav h2{margin:0;font-size:22px;font-weight:700}
 nav ul{
   list-style:none;
   display:flex;
@@ -37,66 +39,227 @@ nav a{
   color:#e5e7eb;
   text-decoration:none;
   font-size:15px;
+  transition:color 0.3s;
 }
 nav a:hover{color:#38bdf8}
 
 /* COVER */
 .cover{
-  height:260px;
-  background:linear-gradient(to right,#2563eb,#38bdf8);
+  height:320px;
+  background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 50%,#38bdf8 100%);
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.cover::before{
+  content:'';
+  position:absolute;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle,rgba(255,255,255,0.1) 1px,transparent 1px);
+  background-size:50px 50px;
+  animation:slide 20s linear infinite;
+}
+@keyframes slide{
+  0%{transform:translate(0,0)}
+  100%{transform:translate(50px,50px)}
 }
 .cover h1{
-  font-size:36px;
+  font-size:42px;
+  margin:0 0 10px 0;
+  position:relative;
+  z-index:1;
+}
+.cover p{
+  font-size:18px;
   margin:0;
+  opacity:0.9;
+  position:relative;
+  z-index:1;
+}
+
+/* SEARCH & FILTER */
+.controls{
+  padding:40px 50px 20px 50px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.search-box{
+  flex:1;
+  min-width:250px;
+  position:relative;
+}
+.search-box input{
+  width:100%;
+  padding:12px 45px 12px 15px;
+  border-radius:12px;
+  border:2px solid #1e293b;
+  background:#1e293b;
+  color:#fff;
+  font-size:15px;
+  transition:all 0.3s;
+}
+.search-box input:focus{
+  outline:none;
+  border-color:#38bdf8;
+  background:#0f172a;
+}
+.search-box::after{
+  content:'🔍';
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:18px;
+}
+.filter-buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.filter-btn{
+  padding:10px 20px;
+  border-radius:10px;
+  border:2px solid #1e293b;
+  background:#1e293b;
+  color:#cbd5e1;
+  cursor:pointer;
+  font-size:14px;
+  transition:all 0.3s;
+}
+.filter-btn:hover{
+  border-color:#38bdf8;
+  color:#38bdf8;
+}
+.filter-btn.active{
+  background:#38bdf8;
+  border-color:#38bdf8;
+  color:#020617;
+  font-weight:600;
 }
 
 /* APPS */
 .apps{
-  padding:50px;
+  padding:20px 50px 50px 50px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:30px;
 }
 .card{
   background:#1e293b;
-  border-radius:18px;
-  padding:20px;
+  border-radius:20px;
+  padding:25px;
   text-align:center;
+  transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+  cursor:pointer;
+  border:2px solid transparent;
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg,#2563eb,#38bdf8);
+  transform:scaleX(0);
+  transition:transform 0.3s;
+}
+.card:hover::before{
+  transform:scaleX(1);
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+  border-color:#38bdf8;
 }
 .card img{
   width:90px;
   height:90px;
-  border-radius:20px;
+  border-radius:22px;
   margin-bottom:15px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  transition:transform 0.3s;
 }
-.card h3{margin:10px 0}
+.card:hover img{
+  transform:scale(1.1);
+}
+.card h3{
+  margin:10px 0;
+  font-size:19px;
+}
 .card p{
   font-size:14px;
-  color:#cbd5f5;
-  min-height:45px;
+  color:#cbd5e1;
+  min-height:42px;
+  line-height:1.5;
+}
+.card-meta{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:15px 0;
+  font-size:13px;
+  color:#94a3b8;
+}
+.card-meta span{
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.category-tag{
+  display:inline-block;
+  padding:5px 12px;
+  background:rgba(56,189,248,0.15);
+  color:#38bdf8;
+  border-radius:8px;
+  font-size:12px;
+  margin:8px 0;
+  font-weight:600;
 }
 .card a{
   display:inline-block;
   margin-top:15px;
-  padding:10px 18px;
+  padding:11px 24px;
   background:#38bdf8;
   color:#020617;
-  border-radius:10px;
+  border-radius:12px;
   font-size:14px;
   text-decoration:none;
+  font-weight:600;
+  transition:all 0.3s;
+  box-shadow:0 4px 12px rgba(56,189,248,0.3);
 }
-.card a:hover{background:#0ea5e9}
+.card a:hover{
+  background:#0ea5e9;
+  transform:scale(1.05);
+  box-shadow:0 6px 20px rgba(56,189,248,0.4);
+}
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:25px;
+  padding:30px;
   font-size:14px;
   color:#94a3b8;
+  background:#020617;
+  margin-top:30px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:16px 20px}
+  nav ul{gap:15px;font-size:14px}
+  .cover h1{font-size:32px}
+  .controls,.apps{padding-left:20px;padding-right:20px}
 }
 </style>
 </head>
@@ -105,7 +268,7 @@ footer{
 
 <!-- NAVBAR -->
 <nav>
-  <h2>My Apps</h2>
+  <h2>📱 My Apps</h2>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="privacy.html">Privacy</a></li>
@@ -116,97 +279,197 @@ footer{
 
 <!-- COVER -->
 <section class="cover">
-  <h1>All My Android Apps</h1>
+  <h1>Discover Amazing Android Apps</h1>
+  <p>Quality apps designed for your daily needs</p>
+</section>
+
+<!-- SEARCH & FILTER -->
+<section class="controls">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search apps...">
+  </div>
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="productivity">Productivity</button>
+    <button class="filter-btn" data-category="tools">Tools</button>
+    <button class="filter-btn" data-category="lifestyle">Lifestyle</button>
+    <button class="filter-btn" data-category="entertainment">Entertainment</button>
+  </div>
 </section>
 
 <!-- APPS -->
-<section class="apps">
+<section class="apps" id="appsGrid">
 
-  <!-- APP 1 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 1</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="productivity">
+    <img src="https://via.placeholder.com/90/4f46e5/ffffff?text=TD" alt="">
+    <h3>Task Master Pro</h3>
+    <span class="category-tag">Productivity</span>
+    <p>Organize your tasks and boost productivity with smart reminders.</p>
+    <div class="card-meta">
+      <span>⭐ 4.7</span>
+      <span>📥 100K+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 2 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 2</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="tools">
+    <img src="https://via.placeholder.com/90/0891b2/ffffff?text=FC" alt="">
+    <h3>File Converter</h3>
+    <span class="category-tag">Tools</span>
+    <p>Convert files between formats quickly and easily on your device.</p>
+    <div class="card-meta">
+      <span>⭐ 4.5</span>
+      <span>📥 250K+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 3 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 3</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="lifestyle">
+    <img src="https://via.placeholder.com/90/16a34a/ffffff?text=FT" alt="">
+    <h3>Fitness Tracker</h3>
+    <span class="category-tag">Lifestyle</span>
+    <p>Track your workouts, calories, and achieve your fitness goals.</p>
+    <div class="card-meta">
+      <span>⭐ 4.8</span>
+      <span>📥 500K+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 4 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 4</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="entertainment">
+    <img src="https://via.placeholder.com/90/dc2626/ffffff?text=MP" alt="">
+    <h3>Music Player Pro</h3>
+    <span class="category-tag">Entertainment</span>
+    <p>Beautiful music player with equalizer and premium features.</p>
+    <div class="card-meta">
+      <span>⭐ 4.6</span>
+      <span>📥 1M+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 5 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 5</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="productivity">
+    <img src="https://via.placeholder.com/90/7c3aed/ffffff?text=NT" alt="">
+    <h3>Quick Notes</h3>
+    <span class="category-tag">Productivity</span>
+    <p>Lightning-fast note-taking app with cloud sync capabilities.</p>
+    <div class="card-meta">
+      <span>⭐ 4.9</span>
+      <span>📥 750K+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 6 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 6</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="tools">
+    <img src="https://via.placeholder.com/90/ea580c/ffffff?text=QR" alt="">
+    <h3>QR Scanner Pro</h3>
+    <span class="category-tag">Tools</span>
+    <p>Fast and secure QR code scanner with history tracking.</p>
+    <div class="card-meta">
+      <span>⭐ 4.7</span>
+      <span>📥 2M+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 7 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 7</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="lifestyle">
+    <img src="https://via.placeholder.com/90/db2777/ffffff?text=RC" alt="">
+    <h3>Recipe Collection</h3>
+    <span class="category-tag">Lifestyle</span>
+    <p>Discover and save thousands of delicious recipes for any occasion.</p>
+    <div class="card-meta">
+      <span>⭐ 4.5</span>
+      <span>📥 300K+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 8 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 8</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="entertainment">
+    <img src="https://via.placeholder.com/90/2563eb/ffffff?text=PG" alt="">
+    <h3>Photo Gallery</h3>
+    <span class="category-tag">Entertainment</span>
+    <p>Elegant photo gallery with powerful editing and organizing tools.</p>
+    <div class="card-meta">
+      <span>⭐ 4.8</span>
+      <span>📥 1.5M+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 9 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 9</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="productivity">
+    <img src="https://via.placeholder.com/90/059669/ffffff?text=BM" alt="">
+    <h3>Budget Manager</h3>
+    <span class="category-tag">Productivity</span>
+    <p>Manage your finances and track expenses with detailed insights.</p>
+    <div class="card-meta">
+      <span>⭐ 4.6</span>
+      <span>📥 400K+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
-  <!-- APP 10 -->
-  <div class="card">
-    <img src="https://via.placeholder.com/90" alt="">
-    <h3>App Name 10</h3>
-    <p>Short description about the app.</p>
+  <div class="card" data-category="tools">
+    <img src="https://via.placeholder.com/90/ca8a04/ffffff?text=WE" alt="">
+    <h3>Weather Expert</h3>
+    <span class="category-tag">Tools</span>
+    <p>Accurate weather forecasts with beautiful widgets and alerts.</p>
+    <div class="card-meta">
+      <span>⭐ 4.7</span>
+      <span>📥 3M+</span>
+    </div>
     <a href="https://play.google.com">Google Play</a>
   </div>
 
 </section>
 
 <footer>
-© 2025 My Apps – All rights reserved
+  © 2025 My Apps – All rights reserved
 </footer>
+
+<script>
+// Search functionality
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card');
+
+searchInput.addEventListener('input', (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  
+  cards.forEach(card => {
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    const description = card.querySelector('p').textContent.toLowerCase();
+    
+    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+
+// Filter functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Update active button
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    
+    const category = button.getAttribute('data-category');
+    
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    
+    // Reset search when filtering
+    searchInput.value = '';
+  });
+});
+</script>
 
 </body>
 </html>
