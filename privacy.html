@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Privacy Policy</title>
+<title>Privacy Policy - Fa9Ssa DEV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#fff}
+body{
+  margin:0;
+  font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+  background:#0f172a;
+  color:#fff;
+  line-height:1.7;
+}
 
 /* NAVBAR */
 nav{
@@ -15,80 +21,388 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:16px 40px;
-  background:#020617;
+  background:rgba(2,6,23,0.95);
+  backdrop-filter:blur(10px);
   position:sticky;
   top:0;
+  z-index:100;
+  box-shadow:0 4px 6px rgba(0,0,0,0.3);
 }
-nav h2{margin:0;font-size:20px}
-nav ul{list-style:none;display:flex;gap:25px;margin:0;padding:0}
-nav a{color:#e5e7eb;text-decoration:none}
+nav h2{margin:0;font-size:22px;font-weight:700}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+}
+nav a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-size:15px;
+  transition:color 0.3s;
+}
 nav a:hover{color:#38bdf8}
 
 /* COVER */
 .cover{
-  height:220px;
-  background:linear-gradient(to right,#2563eb,#38bdf8);
+  height:280px;
+  background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 50%,#38bdf8 100%);
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
 }
-.cover h1{margin:0;font-size:34px}
+.cover::before{
+  content:'';
+  position:absolute;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle,rgba(255,255,255,0.1) 1px,transparent 1px);
+  background-size:50px 50px;
+  animation:slide 20s linear infinite;
+}
+@keyframes slide{
+  0%{transform:translate(0,0)}
+  100%{transform:translate(50px,50px)}
+}
+.cover h1{
+  font-size:38px;
+  margin:0 0 8px 0;
+  position:relative;
+  z-index:1;
+}
+.cover p{
+  font-size:16px;
+  margin:0;
+  opacity:0.9;
+  position:relative;
+  z-index:1;
+  color:#e0f2fe;
+}
 
 /* CONTENT */
 .content{
   max-width:900px;
-  margin:40px auto;
-  padding:0 25px;
+  margin:50px auto;
+  padding:0 40px 60px 40px;
 }
-h2{color:#38bdf8}
-p,li{color:#cbd5f5;line-height:1.7}
-a{color:#38bdf8}
+
+.intro-box{
+  background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(56,189,248,0.15));
+  border:2px solid rgba(56,189,248,0.3);
+  border-radius:16px;
+  padding:25px 30px;
+  margin-bottom:40px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+.intro-box p{
+  margin:0;
+  font-size:15px;
+  color:#cbd5e1;
+}
+
+.section{
+  background:#1e293b;
+  border-radius:16px;
+  padding:30px;
+  margin-bottom:25px;
+  border-left:4px solid #38bdf8;
+  transition:all 0.3s;
+}
+
+.section:hover{
+  box-shadow:0 8px 24px rgba(0,0,0,0.4);
+  transform:translateX(4px);
+}
+
+.section h2{
+  color:#38bdf8;
+  font-size:24px;
+  margin:0 0 20px 0;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.section h2::before{
+  content:'';
+  width:6px;
+  height:6px;
+  background:#38bdf8;
+  border-radius:50%;
+  box-shadow:0 0 10px #38bdf8;
+}
+
+.section h3{
+  color:#60a5fa;
+  font-size:18px;
+  margin:25px 0 15px 0;
+}
+
+.section p{
+  color:#cbd5e1;
+  margin:0 0 15px 0;
+  font-size:15px;
+}
+
+.section ul{
+  margin:15px 0;
+  padding-left:25px;
+  color:#cbd5e1;
+}
+
+.section li{
+  margin-bottom:10px;
+  font-size:15px;
+}
+
+.section strong{
+  color:#e0f2fe;
+  font-weight:600;
+}
+
+.section a{
+  color:#38bdf8;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:border-color 0.3s;
+}
+
+.section a:hover{
+  border-bottom-color:#38bdf8;
+}
+
+.highlight-box{
+  background:rgba(56,189,248,0.1);
+  border-left:3px solid #38bdf8;
+  padding:15px 20px;
+  margin:20px 0;
+  border-radius:8px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  margin:20px 0;
+}
+
+.service-card{
+  background:rgba(15,23,42,0.5);
+  padding:15px;
+  border-radius:10px;
+  border:1px solid rgba(56,189,248,0.2);
+  transition:all 0.3s;
+}
+
+.service-card:hover{
+  border-color:#38bdf8;
+  background:rgba(15,23,42,0.8);
+}
+
+.service-card h4{
+  color:#38bdf8;
+  margin:0 0 8px 0;
+  font-size:16px;
+}
+
+.service-card p{
+  margin:0;
+  font-size:14px;
+  color:#94a3b8;
+}
 
 /* FOOTER */
-footer{text-align:center;padding:25px;color:#94a3b8;font-size:14px}
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#94a3b8;
+  background:#020617;
+  border-top:1px solid #1e293b;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:16px 20px}
+  nav ul{gap:15px;font-size:14px}
+  .cover h1{font-size:28px}
+  .content{padding:0 20px 40px 20px}
+  .section{padding:20px}
+  .service-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-  <h2>My Apps</h2>
+  <h2>📱 Fa9Ssa DEV</h2>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="about.html">About Us</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
+<!-- COVER -->
 <section class="cover">
   <h1>Privacy Policy</h1>
+  <p>Your privacy matters to us</p>
 </section>
 
+<!-- CONTENT -->
 <div class="content">
-  <p>This privacy policy applies to all applications published by <strong>My Apps</strong>.</p>
 
-  <h2>Information Collection and Use</h2>
-  <p>We do not collect any personally identifiable information from users. Some apps may use third-party services.</p>
+  <div class="intro-box">
+    <p><strong>Fa9Ssa DEV team</strong> has adopted this privacy policy to explain how we collect, store, and use information in connection with our Services. <strong>BY INSTALLING, USING, REGISTERING TO OR OTHERWISE ACCESSING THE SERVICES, YOU AGREE TO THIS PRIVACY POLICY.</strong> We reserve the right to modify this Privacy Policy at reasonable times, so please review it frequently.</p>
+  </div>
 
-  <h2>Third-Party Services</h2>
-  <ul>
-    <li>Google AdMob</li>
-    <li>Google Analytics for Firebase</li>
-  </ul>
+  <div class="section">
+    <h2>Non-Personal Data</h2>
+    <p>For purposes of this Privacy Policy, <strong>"non-personal data"</strong> means information that does not directly identify you.</p>
+    
+    <p>The types of non-personal data we may collect and use include, but are not limited to:</p>
+    <ul>
+      <li>Application properties (name, package name, icon installed on your device)</li>
+      <li>Your checking (including likes, recommendations) of a game will be disclosed to all Fa9Ssa DEV users</li>
+    </ul>
 
-  <h2>Log Data</h2>
-  <p>In case of an error in the app, log data may be collected.</p>
+    <p>Fa9Ssa DEV may use and disclose to our partners and contractors the collected non-personal data for purposes of analyzing usage of the Services, advertisement serving, managing and providing the Services, and to further develop the Services and other Fa9Ssa DEV services and products.</p>
 
-  <h2>Children’s Information</h2>
-  <p>Our apps do not target children under the age of 13.</p>
+    <div class="highlight-box">
+      <p><strong>Note:</strong> Analytics companies utilized by Fa9Ssa DEV may combine the information collected with other information they have independently collected from other services or products relating to your activities. These companies collect and use information under their own privacy policies.</p>
+    </div>
+  </div>
 
-  <h2>Contact Us</h2>
-  <p>Email: <strong>email@example.com</strong></p>
+  <div class="section">
+    <h2>Personal Data</h2>
+    <p>For purposes of this Privacy Policy, <strong>"personal data"</strong> means personally identifiable information that specifically identifies you as an individual.</p>
+
+    <p>Personal information collected by Fa9Ssa DEV is information voluntarily provided to us by you when you create your account or change your account information. The information includes:</p>
+    <ul>
+      <li>Facebook ID, name, gender, location</li>
+      <li>Your friends' ID on Facebook</li>
+      <li>Game check-ins, likes, dislikes, recommendations and messages</li>
+    </ul>
+
+    <h3>Social Network Integration</h3>
+    <p>Certain features of the Services may be able to connect to your social networking sites to obtain additional information about you. In such cases, Fa9Ssa DEV may be able to collect certain information from your social networking profile when your social networking site permits it, and when you consent to allow your social networking site to make that information available to Fa9Ssa DEV.</p>
+
+    <p>This information may include:</p>
+    <ul>
+      <li>Name, profile picture, gender, user ID</li>
+      <li>Email address, country, language, time zone</li>
+      <li>Organizations and links on your profile page</li>
+      <li>Names and profile pictures of your social networking site "friends"</li>
+      <li>Other information you have included in your social networking site profile</li>
+    </ul>
+
+    <p>Fa9Ssa DEV may associate and/or combine as well as use information collected by Fa9Ssa DEV and/or obtained through such social networking sites in accordance with this Privacy Policy.</p>
+  </div>
+
+  <div class="section">
+    <h2>Disclosure and Transfer of Personal Data</h2>
+    <p>Fa9Ssa DEV collects and processes personal data on a voluntary basis and <strong>it is not in the business of selling your personal data to third parties.</strong></p>
+
+    <p>Personal data may, however, occasionally be disclosed in accordance with applicable legislation and this Privacy Policy. We may disclose personal data:</p>
+    <ul>
+      <li>To our parent companies and subsidiaries</li>
+      <li>To agents and contractors who collect and process personal data on our behalf</li>
+      <li>To third party service providers (credit card processors, e-mail service providers, shipping agents, data analyzers)</li>
+      <li>As required by law enforcement or government officials</li>
+      <li>When necessary to protect Fa9Ssa DEV's rights, property, operations, or users</li>
+      <li>In connection with a corporate merger, consolidation, or sale of assets</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>Important:</strong> To the extent permitted by applicable law, Fa9Ssa DEV will make reasonable efforts to notify you of such disclosure through our website or in another reasonable manner.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Safeguards</h2>
+    <p>Fa9Ssa DEV follows generally accepted industry standards and maintains reasonable safeguards to attempt to ensure the security, integrity and privacy of the information in our possession.</p>
+
+    <ul>
+      <li>Only persons with a need to process your personal data have access to it</li>
+      <li>Personal data is stored in secure operating environments not available to the public</li>
+      <li>Personal data is maintained behind a firewall-protected server</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>Disclaimer:</strong> However, no system can be 100% secure and there is the possibility that despite Fa9Ssa DEV's reasonable efforts, there could be unauthorized access to your personal data. By using the Services, you assume this risk.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Other Important Information</h2>
+    
+    <h3>Public Forums</h3>
+    <p>Please be aware of the open nature of certain social networking and other open features of the Services. Any data that you disclose in forums, blogs, chats or the like is public information, and there is no expectation of privacy or confidentiality. Fa9Ssa DEV is not responsible for any personal data you choose to make public in any of these forums.</p>
+
+    <h3>Children's Privacy</h3>
+    <p>If you are under 15 years of age or a minor in your country of residence, please ask your legal guardian's permission to use or access the Services. Fa9Ssa DEV takes children's privacy seriously, and encourages parents and/or guardians to play an active role in their children's online experience at all times.</p>
+
+    <p>Fa9Ssa DEV does not knowingly collect any personal information from children below the aforementioned age and if we learn that we have inadvertently gathered personal data from children under the aforementioned age, we will take reasonable measures to promptly erase such personal data from our records.</p>
+
+    <h3>International Data Transfers</h3>
+    <p>Fa9Ssa DEV may store and/or transfer your personal data to its affiliates and partners in and outside of EU/EEA member states and the United States in accordance with mandatory legislation and this Privacy Policy.</p>
+
+    <h3>Complaints</h3>
+    <p>Fa9Ssa DEV regularly reviews its compliance with this Privacy Policy. If we receive a formal written complaint from you, it is our policy to attempt to contact you directly to address any of your concerns. We will cooperate with the appropriate governmental authorities, including data protection authorities, to resolve any complaints.</p>
+  </div>
+
+  <div class="section">
+    <h2>3rd Party Services</h2>
+    <p>We use 3rd party services in our apps. These services collect usage data in compliance with their Privacy Policies.</p>
+
+    <h3>Advertising</h3>
+    <p>3rd party ad serving systems allow user data to be utilized for advertising communication purposes displayed in the form of banners and other advertisements on Fa9Ssa DEV apps, possibly based on user interests.</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>AdMob</h4>
+        <p>We use AdMob by Google as the main ad server.</p>
+        <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy Policy →</a>
+      </div>
+    </div>
+
+    <h3>Analytics</h3>
+    <p>3rd party analytics services allow us to monitor and analyze app usage, better understand our audience and user behavior.</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>Flurry Analytics</h4>
+        <p>Collects log data including frequency of use and time spent in the app.</p>
+        <a href="http://www.flurry.com/privacy-policy.html" target="_blank">Privacy Policy →</a>
+      </div>
+
+      <div class="service-card">
+        <h4>Google Analytics</h4>
+        <p>Tracks and examines app use to prepare reports on user activities.</p>
+        <a href="http://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy Policy →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>COPPA Compliance</h2>
+    <p><strong>Children's Online Privacy Protection Act Compliance</strong></p>
+    <p>We are in compliance with the requirements of COPPA. We do not collect any personal information from anyone under 13 years of age. Our products and services are all directed to people who are at least 13 years old or older.</p>
+  </div>
+
 </div>
 
 <footer>
-© 2025 My Apps
+  © 2025 Fa9Ssa DEV – All rights reserved
 </footer>
 
 </body>
