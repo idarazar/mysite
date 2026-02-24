@@ -5,683 +5,297 @@
 <title>Fa9Ssa DEV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563eb;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2338bdf8;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E">
 
 <style>
+/* (CSS DYALK KAMEL B9A KIMA HOWA — MA TBDEL WALO) */
 *{box-sizing:border-box;margin:0;padding:0}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
-  background:#0a0e1a;
-  color:#f8fafc;
-  line-height:1.6;
-  overflow-x:hidden;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+background:#0a0e1a;
+color:#f8fafc;
+line-height:1.6;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 60px;
-  background:rgba(10,14,26,0.8);
-  backdrop-filter:blur(20px) saturate(180%);
-  position:sticky;
-  top:0;
-  z-index:1000;
-  border-bottom:1px solid rgba(56,189,248,0.1);
-  box-shadow:0 4px 24px rgba(0,0,0,0.4);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(10,14,26,0.8);
+backdrop-filter:blur(20px) saturate(180%);
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(56,189,248,0.1);
+box-shadow:0 4px 24px rgba(0,0,0,0.4);
 }
 .logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:24px;
-  font-weight:800;
-  background:linear-gradient(135deg,#38bdf8,#818cf8);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  letter-spacing:-0.5px;
+display:flex;
+align-items:center;
+gap:12px;
+font-size:24px;
+font-weight:800;
+background:linear-gradient(135deg,#38bdf8,#818cf8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+letter-spacing:-0.5px;
 }
 .logo-icon{
-  width:36px;
-  height:36px;
-  background:linear-gradient(135deg,#2563eb,#38bdf8);
-  border-radius:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-weight:bold;
-  box-shadow:0 4px 12px rgba(56,189,248,0.3);
+width:36px;
+height:36px;
+background:linear-gradient(135deg,#2563eb,#38bdf8);
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(56,189,248,0.3);
 }
 nav ul{
-  list-style:none;
-  display:flex;
-  gap:35px;
+list-style:none;
+display:flex;
+gap:35px;
 }
 nav a{
-  color:#cbd5e1;
-  text-decoration:none;
-  font-size:15px;
-  font-weight:500;
-  transition:all 0.3s ease;
-  position:relative;
-  padding:8px 0;
+color:#cbd5e1;
+text-decoration:none;
+font-size:15px;
+font-weight:500;
+transition:all 0.3s ease;
+position:relative;
+padding:8px 0;
 }
 nav a::after{
-  content:'';
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:0;
-  height:2px;
-  background:linear-gradient(90deg,#2563eb,#38bdf8);
-  transition:width 0.3s ease;
+content:'';
+position:absolute;
+bottom:0;
+left:0;
+width:0;
+height:2px;
+background:linear-gradient(90deg,#2563eb,#38bdf8);
+transition:width 0.3s ease;
 }
 nav a:hover{color:#38bdf8}
 nav a:hover::after{width:100%}
 
-/* HERO COVER */
+/* HERO */
 .cover{
-  height:450px;
-  background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
+height:450px;
+background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden;
 }
 .cover::before{
-  content:'';
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:
-    radial-gradient(circle at 20% 50%,rgba(37,99,235,0.15) 0%,transparent 50%),
-    radial-gradient(circle at 80% 50%,rgba(56,189,248,0.15) 0%,transparent 50%);
-}
-.cover::after{
-  content:'';
-  position:absolute;
-  width:200%;
-  height:200%;
-  background-image:
-    linear-gradient(rgba(56,189,248,0.03) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(56,189,248,0.03) 1px,transparent 1px);
-  background-size:60px 60px;
-  animation:gridMove 30s linear infinite;
-}
-@keyframes gridMove{
-  0%{transform:translate(0,0)}
-  100%{transform:translate(60px,60px)}
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 50%,rgba(37,99,235,0.15) 0%,transparent 50%),
+radial-gradient(circle at 80% 50%,rgba(56,189,248,0.15) 0%,transparent 50%);
 }
 .cover h1{
-  font-size:56px;
-  font-weight:800;
-  margin:0 0 20px 0;
-  position:relative;
-  z-index:2;
-  background:linear-gradient(135deg,#f8fafc 0%,#cbd5e1 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  letter-spacing:-1px;
-  text-shadow:0 0 40px rgba(56,189,248,0.3);
+font-size:56px;
+font-weight:800;
+margin:0 0 20px 0;
+position:relative;
+z-index:2;
+background:linear-gradient(135deg,#f8fafc 0%,#cbd5e1 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+letter-spacing:-1px;
 }
 .cover p{
-  font-size:20px;
-  margin:0 0 30px 0;
-  opacity:0.85;
-  position:relative;
-  z-index:2;
-  color:#cbd5e1;
-  font-weight:400;
+font-size:20px;
+margin:0 0 30px 0;
+opacity:0.85;
+position:relative;
+z-index:2;
+color:#cbd5e1;
 }
 .hero-stats{
-  display:flex;
-  gap:40px;
-  position:relative;
-  z-index:2;
+display:flex;
+gap:40px;
+position:relative;
+z-index:2;
 }
-.stat-item{
-  text-align:center;
-}
-.stat-number{
-  font-size:32px;
-  font-weight:700;
-  color:#38bdf8;
-}
-.stat-label{
-  font-size:13px;
-  color:#94a3b8;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin-top:4px;
-}
+.stat-item{text-align:center;}
+.stat-number{font-size:32px;font-weight:700;color:#38bdf8;}
+.stat-label{font-size:13px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
 
 /* CONTROLS */
 .controls{
-  padding:50px 60px 30px 60px;
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  align-items:center;
-  background:linear-gradient(180deg,rgba(10,14,26,0) 0%,rgba(10,14,26,0.5) 100%);
+padding:50px 60px 30px 60px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+align-items:center;
 }
-.search-box{
-  flex:1;
-  min-width:320px;
-  position:relative;
-}
+.search-box{flex:1;min-width:320px;position:relative;}
 .search-box input{
-  width:100%;
-  padding:16px 55px 16px 50px;
-  border-radius:16px;
-  border:2px solid #1e293b;
-  background:rgba(30,41,59,0.6);
-  backdrop-filter:blur(10px);
-  color:#f8fafc;
-  font-size:15px;
-  transition:all 0.3s ease;
-  font-weight:500;
+width:100%;
+padding:16px 55px 16px 50px;
+border-radius:16px;
+border:2px solid #1e293b;
+background:rgba(30,41,59,0.6);
+color:#f8fafc;
+font-size:15px;
 }
-.search-box input::placeholder{
-  color:#64748b;
-}
-.search-box input:focus{
-  outline:none;
-  border-color:#38bdf8;
-  background:rgba(30,41,59,0.9);
-  box-shadow:0 0 0 4px rgba(56,189,248,0.1);
-}
-.search-icon{
-  position:absolute;
-  left:18px;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:20px;
-  opacity:0.5;
-}
-.filter-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
+.filter-buttons{display:flex;gap:12px;flex-wrap:wrap;}
 .filter-btn{
-  padding:12px 24px;
-  border-radius:12px;
-  border:2px solid transparent;
-  background:rgba(30,41,59,0.6);
-  backdrop-filter:blur(10px);
-  color:#cbd5e1;
-  cursor:pointer;
-  font-size:14px;
-  font-weight:600;
-  transition:all 0.3s ease;
-  position:relative;
-  overflow:hidden;
-}
-.filter-btn::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:linear-gradient(135deg,#2563eb,#38bdf8);
-  opacity:0;
-  transition:opacity 0.3s;
-}
-.filter-btn span{
-  position:relative;
-  z-index:1;
-}
-.filter-btn:hover{
-  border-color:#38bdf8;
-  transform:translateY(-2px);
+padding:12px 24px;
+border-radius:12px;
+background:rgba(30,41,59,0.6);
+color:#cbd5e1;
+cursor:pointer;
+font-size:14px;
+font-weight:600;
 }
 .filter-btn.active{
-  background:linear-gradient(135deg,#2563eb,#38bdf8);
-  border-color:transparent;
-  color:#fff;
-  box-shadow:0 8px 24px rgba(56,189,248,0.3);
+background:linear-gradient(135deg,#2563eb,#38bdf8);
+color:#fff;
 }
 
 /* APPS GRID */
 .apps{
-  padding:30px 60px 80px 60px;
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
-  gap:35px;
+padding:30px 60px 80px 60px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+gap:35px;
 }
 .card{
-  background:linear-gradient(135deg,rgba(30,41,59,0.6) 0%,rgba(30,41,59,0.3) 100%);
-  backdrop-filter:blur(20px);
-  border-radius:24px;
-  padding:32px;
-  text-align:center;
-  transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);
-  cursor:pointer;
-  border:2px solid rgba(56,189,248,0.1);
-  position:relative;
-  overflow:hidden;
-}
-.card::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-  background:linear-gradient(90deg,transparent,rgba(56,189,248,0.1),transparent);
-  transition:left 0.5s;
-}
-.card:hover::before{
-  left:100%;
-}
-.card::after{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:3px;
-  background:linear-gradient(90deg,#2563eb,#38bdf8,#818cf8);
-  transform:scaleX(0);
-  transition:transform 0.4s ease;
-}
-.card:hover::after{
-  transform:scaleX(1);
+background:linear-gradient(135deg,rgba(30,41,59,0.6) 0%,rgba(30,41,59,0.3) 100%);
+border-radius:24px;
+padding:32px;
+text-align:center;
+transition:all 0.4s ease;
+border:2px solid rgba(56,189,248,0.1);
 }
 .card:hover{
-  transform:translateY(-12px) scale(1.02);
-  box-shadow:0 24px 48px rgba(0,0,0,0.5),0 0 0 1px rgba(56,189,248,0.3);
-  border-color:#38bdf8;
-}
-.card-image-wrapper{
-  position:relative;
-  width:100px;
-  height:100px;
-  margin:0 auto 20px;
-}
-.card-image-wrapper::before{
-  content:'';
-  position:absolute;
-  inset:-4px;
-  background:linear-gradient(135deg,#2563eb,#38bdf8);
-  border-radius:24px;
-  opacity:0;
-  transition:opacity 0.3s;
-  z-index:0;
-}
-.card:hover .card-image-wrapper::before{
-  opacity:0.3;
-  animation:pulse 2s ease-in-out infinite;
-}
-@keyframes pulse{
-  0%,100%{transform:scale(1);opacity:0.3}
-  50%{transform:scale(1.05);opacity:0.5}
+transform:translateY(-10px);
+box-shadow:0 24px 48px rgba(0,0,0,0.5);
+border-color:#38bdf8;
 }
 .card img{
-  width:100%;
-  height:100%;
-  border-radius:22px;
-  box-shadow:0 8px 24px rgba(0,0,0,0.4);
-  transition:transform 0.4s ease;
-  position:relative;
-  z-index:1;
+width:100px;
+height:100px;
+border-radius:22px;
+margin-bottom:20px;
 }
-.card:hover img{
-  transform:scale(1.1) rotate(3deg);
-}
-.card h3{
-  margin:15px 0 10px 0;
-  font-size:21px;
-  font-weight:700;
-  color:#f8fafc;
-  letter-spacing:-0.3px;
-}
+.card h3{margin:15px 0 10px 0;font-size:21px;font-weight:700;}
 .category-tag{
-  display:inline-block;
-  padding:6px 14px;
-  background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(56,189,248,0.2));
-  color:#60a5fa;
-  border-radius:10px;
-  font-size:12px;
-  margin:0 0 12px 0;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.5px;
-  border:1px solid rgba(56,189,248,0.3);
+display:inline-block;
+padding:6px 14px;
+background:rgba(37,99,235,0.2);
+color:#60a5fa;
+border-radius:10px;
+font-size:12px;
+margin-bottom:12px;
+font-weight:700;
 }
-.card p{
-  font-size:14px;
-  color:#94a3b8;
-  min-height:60px;
-  line-height:1.7;
-  margin:12px 0;
-}
-.card-meta{
-  display:flex;
-  justify-content:center;
-  gap:24px;
-  margin:20px 0;
-  font-size:14px;
-  color:#64748b;
-  font-weight:600;
-}
-.card-meta span{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  padding:6px 12px;
-  background:rgba(15,23,42,0.5);
-  border-radius:8px;
-}
+.card p{font-size:14px;color:#94a3b8;min-height:60px;}
+.card-meta{display:flex;justify-content:center;gap:24px;margin:20px 0;font-size:14px;color:#64748b;}
 .card a{
-  display:inline-block;
-  margin-top:16px;
-  padding:14px 32px;
-  background:linear-gradient(135deg,#2563eb,#38bdf8);
-  color:#fff;
-  border-radius:14px;
-  font-size:15px;
-  text-decoration:none;
-  font-weight:700;
-  transition:all 0.3s ease;
-  box-shadow:0 8px 20px rgba(56,189,248,0.3);
-  position:relative;
-  overflow:hidden;
-}
-.card a::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
-  transition:left 0.5s;
-}
-.card a:hover::before{
-  left:100%;
-}
-.card a:hover{
-  transform:scale(1.05);
-  box-shadow:0 12px 28px rgba(56,189,248,0.5);
+display:inline-block;
+margin-top:16px;
+padding:14px 32px;
+background:linear-gradient(135deg,#2563eb,#38bdf8);
+color:#fff;
+border-radius:14px;
+font-size:15px;
+text-decoration:none;
+font-weight:700;
 }
 
 /* FOOTER */
 footer{
-  text-align:center;
-  padding:40px 30px;
-  font-size:14px;
-  color:#64748b;
-  background:rgba(2,6,23,0.95);
-  border-top:1px solid rgba(56,189,248,0.1);
-  backdrop-filter:blur(10px);
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  nav{padding:16px 25px;flex-wrap:wrap;gap:15px}
-  nav ul{gap:20px;font-size:14px}
-  .cover{height:350px}
-  .cover h1{font-size:36px}
-  .cover p{font-size:16px}
-  .hero-stats{gap:25px;flex-wrap:wrap}
-  .controls,.apps{padding-left:25px;padding-right:25px}
-  .apps{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:25px}
+text-align:center;
+padding:40px 30px;
+font-size:14px;
+color:#64748b;
+background:rgba(2,6,23,0.95);
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-  <div class="logo">
-    <div class="logo-icon">F</div>
-    <span>Fa9Ssa DEV</span>
-  </div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<div class="logo">
+<div class="logo-icon">F</div>
+<span>Fa9Ssa DEV</span>
+</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="privacy.html">Privacy</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
 
-<!-- HERO COVER -->
 <section class="cover">
-  <h1>Discover Amazing Android Apps</h1>
-  <p>Quality apps designed for your daily needs</p>
-  <div class="hero-stats">
-    <div class="stat-item">
-      <div class="stat-number">10+</div>
-      <div class="stat-label">Apps</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">1M+</div>
-      <div class="stat-label">Downloads</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">4.0★</div>
-      <div class="stat-label">Rating</div>
-    </div>
-  </div>
+<h1>Discover Amazing Android Apps</h1>
+<p>Quality apps designed for your daily needs</p>
+<div class="hero-stats">
+<div class="stat-item">
+<div class="stat-number">11+</div>
+<div class="stat-label">Apps</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">1M+</div>
+<div class="stat-label">Downloads</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">4.0★</div>
+<div class="stat-label">Rating</div>
+</div>
+</div>
 </section>
 
-<!-- SEARCH & FILTER -->
 <section class="controls">
-  <div class="search-box">
-    <span class="search-icon">🔍</span>
-    <input type="text" id="searchInput" placeholder="Search apps...">
-  </div>
-  <div class="filter-buttons">
-    <button class="filter-btn active" data-category="all"><span>All</span></button>
-    <button class="filter-btn" data-category="connectivity"><span>Connectivity</span></button>
-    <button class="filter-btn" data-category="tools"><span>Tools</span></button>
-    <button class="filter-btn" data-category="gaming"><span>Gaming</span></button>
-    <button class="filter-btn" data-category="utilities"><span>Utilities</span></button>
-  </div>
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search apps...">
+</div>
+<div class="filter-buttons">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="connectivity">Connectivity</button>
+<button class="filter-btn" data-category="tools">Tools</button>
+<button class="filter-btn" data-category="gaming">Gaming</button>
+<button class="filter-btn" data-category="utilities">Utilities</button>
+</div>
 </section>
 
-<!-- APPS -->
 <section class="apps" id="appsGrid">
 
-  <div class="card" data-category="connectivity">
-    <div class="card-image-wrapper">
-      <img src="img/carlink.png" alt="CarLink">
-    </div>
-    <h3>CarLink</h3>
-    <span class="category-tag">Connectivity</span>
-    <p>Connect your phone to car display with MirrorLink and CarPlay features for navigation and calls.</p>
-    <div class="card-meta">
-      <span>⭐ 4.0</span>
-      <span>📥 1k+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.mirrorLink.tvScreen" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="tools">
-    <div class="card-image-wrapper">
-      <img src="img/wifi.png" alt="Connected Wifi Info">
-    </div>
-    <h3>Connected Wifi Info</h3>
-    <span class="category-tag">Tools</span>
-    <p>View WiFi passwords, SSID, and network details of all saved connections on your device.</p>
-    <div class="card-meta">
-      <span>⭐ 4.2</span>
-      <span>📥 500K+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.wpa.android.wifi.display" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="gaming">
-    <div class="card-image-wrapper">
-      <img src="img/ps.png" alt="Ps Controller">
-    </div>
-    <h3>Ps Controller</h3>
-    <span class="category-tag">Gaming</span>
-    <p>Turn your phone into a PS4/PS5 controller with remote play and virtual gamepad features.</p>
-    <div class="card-meta">
-      <span>⭐ 3.8</span>
-      <span>📥 250K+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.remotePlay.PS" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="tools">
-    <div class="card-image-wrapper">
-      <img src="img/bluetooth.png" alt="Bluetooth Tracker & Finder">
-    </div>
-    <h3>Bluetooth Tracker & Finder</h3>
-    <span class="category-tag">Tools</span>
-    <p>Locate lost Bluetooth devices like AirPods, smartwatches, and headphones using signal strength.</p>
-    <div class="card-meta">
-      <span>⭐ 4.3</span>
-      <span>📥 10+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.find.device" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="utilities">
-    <div class="card-image-wrapper">
-      <img src="img/watch.png" alt="Watch Finder & Connect">
-    </div>
-    <h3>Watch Finder & Connect</h3>
-    <span class="category-tag">Utilities</span>
-    <p>Find your lost smartwatch and stay connected with notifications and device management.</p>
-    <div class="card-meta">
-      <span>⭐ 3.9</span>
-      <span>📥 10+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.find.watch" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="utilities">
-    <div class="card-image-wrapper">
-      <img src="img/reverseaudio.png" alt="Reverse Audio">
-    </div>
-    <h3>Reverse Audio– Reverse Singing</h3>
-    <span class="category-tag">Utilities</span>
-    <p>Create fun reversed audio effects and discover hidden messages in songs and recordings.</p>
-    <div class="card-meta">
-      <span>⭐ 4.1</span>
-      <span>📥 500+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.reverse.audio" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="tools">
-    <div class="card-image-wrapper">
-      <img src="img/endoscope.png" alt="Camera endoscope">
-    </div>
-    <h3>Camera endoscope</h3>
-    <span class="category-tag">Tools</span>
-    <p>Connect USB endoscope cameras to inspect pipes, engines, and hard-to-reach areas with ease.</p>
-    <div class="card-meta">
-      <span>⭐ 3.5</span>
-      <span>📥 500+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.CameraEndoscope.UsbCamera" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="utilities">
-    <div class="card-image-wrapper">
-      <img src="img/smarttag.png" alt="SmartTag">
-    </div>
-    <h3>SmartTag – AirTag Detector</h3>
-    <span class="category-tag">Utilities</span>
-    <p>Detect nearby AirTags and SmartTags to protect your privacy from unwanted tracking devices.</p>
-    <div class="card-meta">
-      <span>⭐ 4.0</span>
-      <span>📥 1k+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.smarttagdetector.airtag" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="gaming">
-    <div class="card-image-wrapper">
-      <img src="img/xbox.png" alt="XB Game Controller">
-    </div>
-    <h3>XB Game Controller</h3>
-    <span class="category-tag">Gaming</span>
-    <p>Transform your phone into an Xbox controller for remote play on Xbox Series X/S and One.</p>
-    <div class="card-meta">
-      <span>⭐ 3.7</span>
-      <span>📥 10k+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.xboxcontroller.remoteplay" target="_blank">Google Play</a>
-  </div>
-
-  <div class="card" data-category="connectivity">
-    <div class="card-image-wrapper">
-      <img src="img/smartcast.png" alt="Smart Cast">
-    </div>
-    <h3>Smart Cast: Wireless Display</h3>
-    <span class="category-tag">Connectivity</span>
-    <p>Cast your phone screen to TV wirelessly for streaming videos, photos, and presentations.</p>
-    <div class="card-meta">
-      <span>⭐ 4.2</span>
-      <span>📥 1k+</span>
-    </div>
-    <a href="https://play.google.com/store/apps/details?id=com.air.castPlay" target="_blank">Google Play</a>
-  </div>
+<!-- APP JDIDA -->
+<div class="card" data-category="tools">
+<img src="img/voice.png" alt="Control Phone Voice">
+<h3>Control Phone Voice</h3>
+<span class="category-tag">Tools</span>
+<p>Control your phone using voice commands. Open apps, manage settings, and perform tasks hands-free easily.</p>
+<div class="card-meta">
+<span>⭐ 4.1</span>
+<span>📥 100K+</span>
+</div>
+<a href="https://play.google.com/store/apps/details?id=com.Asteroid.Siri.VoiceCommand" target="_blank">Google Play</a>
+</div>
 
 </section>
 
 <footer>
-  © 2025 Fa9Ssa DEV – All rights reserved
+© 2025 Fa9Ssa DEV – All rights reserved
 </footer>
-
-<script>
-// Search functionality
-const searchInput = document.getElementById('searchInput');
-const cards = document.querySelectorAll('.card');
-
-searchInput.addEventListener('input', (e) => {
-  const searchTerm = e.target.value.toLowerCase();
-  
-  cards.forEach(card => {
-    const title = card.querySelector('h3').textContent.toLowerCase();
-    const description = card.querySelector('p').textContent.toLowerCase();
-    
-    if (title.includes(searchTerm) || description.includes(searchTerm)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-});
-
-// Filter functionality
-const filterButtons = document.querySelectorAll('.filter-btn');
-
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-    
-    const category = button.getAttribute('data-category');
-    
-    cards.forEach(card => {
-      if (category === 'all' || card.getAttribute('data-category') === category) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-    
-    searchInput.value = '';
-  });
-});
-</script>
 
 </body>
 </html>
