@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Endoscope Camera </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            color: #333;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Policy</h1>
+    <p><strong>Last Updated:</strong> August 05, 2026</p>
+
+    <p>This Privacy Policy describes how Fa9ssa Dev ("we", "us", or "our") collects, uses, and protects your information when you use the Endoscope Camera / USB OTG mobile application ("App"). We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
+
+    <p>By using the App, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>1.1 Information You Provide</h3>
+    <p>We do not require you to create an account or provide personal information to use the App. If you contact us for customer support, we may collect your name and email address solely to respond to your inquiry.</p>
+
+    <h3>1.2 Automatically Collected Information</h3>
+    <p>When you use the App, certain information may be collected automatically, including:</p>
+    <ul>
+        <li><strong>Device Information:</strong> Device model, operating system version, unique device identifiers, and device settings relevant to app functionality.</li>
+        <li><strong>Network Information:</strong> Wi-Fi network name (SSID) and local IP addresses — used solely for discovering Smart TVs and media devices on your local network for screen mirroring and media casting functionality.</li>
+        <li><strong>Usage Data:</strong> General app usage statistics, crash reports, and performance data to help us improve the App.</li>
+        <li><strong>Advertising Data:</strong> Advertising identifiers (e.g., Google Advertising ID) used by our advertising partners to serve relevant ads. This is not collected for Premium subscribers who have opted out of ads.</li>
+    </ul>
+
+    <h3>1.3 Subscription Information</h3>
+    <p>If you subscribe to our Premium plan, all payment processing is handled by Google Play. We do not collect, store, or have access to your payment card details, bank account information, or any other financial data. We only receive a confirmation of your subscription status (active or expired) from Google Play to enable Premium features.</p>
+
+    <h2>2. How We Use Your Information</h2>
+    <p>We use the collected information for the following purposes:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Purpose</th>
+                <th>Data Used</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Device discovery (Smart TV scanning)</td>
+                <td>Wi-Fi network info, local IP addresses</td>
+            </tr>
+            <tr>
+                <td>Screen mirroring and media casting</td>
+                <td>Device info, network info</td>
+            </tr>
+            <tr>
+                <td>Serving advertisements (Basic plan)</td>
+                <td>Advertising ID, device info</td>
+            </tr>
+            <tr>
+                <td>App improvement and bug fixing</td>
+                <td>Crash reports, usage data</td>
+            </tr>
+            <tr>
+                <td>Managing your subscription</td>
+                <td>Subscription status from Google Play</td>
+            </tr>
+            <tr>
+                <td>Customer support</td>
+                <td>Email address (if you contact us)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Third-Party Services</h2>
+    <p>The App uses the following third-party services that may collect information:</p>
+
+    <h3>3.1 Google AdMob</h3>
+    <p>We use Google AdMob to display advertisements to users on the Basic (free) plan. AdMob may collect device identifiers, IP addresses, and usage data to serve personalized or non-personalized ads depending on your consent preferences. Premium subscribers are not shown any ads, and AdMob does not collect data from Premium users.</p>
+
+    <h3>3.2 Meta Audience Network (Facebook)</h3>
+    <p>We use Meta Audience Network for ad mediation. This service may collect device and usage data for ad targeting purposes. This applies only to Basic (free) plan users.</p>
+
+    <h3>3.3 Google Play Billing</h3>
+    <p>Subscription purchases are processed through Google Play. Google manages all payment data. We do not have access to your payment information.</p>
+
+    <h3>3.4 Google UMP (User Messaging Platform)</h3>
+    <p>For users in the European Economic Area (EEA), we use Google's User Messaging Platform to obtain consent for personalized advertising in compliance with GDPR and ePrivacy regulations.</p>
+
+    <h2>4. Data Sharing</h2>
+    <p>We do not sell, trade, or rent your personal information to third parties. Information may be shared only in the following circumstances:</p>
+    <ul>
+        <li>With advertising partners (Google AdMob, Meta) — only for Basic plan users, to serve relevant ads.</li>
+        <li>As required by law — if we are legally obligated to disclose information in response to valid legal processes.</li>
+        <li>To protect rights — to enforce our Terms, protect our rights, or ensure the safety of our users.</li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <p>We retain automatically collected data only for as long as necessary to fulfill the purposes described in this Privacy Policy. Crash reports and usage analytics are retained for up to 12 months. If you contact us for support, we retain your correspondence for up to 24 months. You may request deletion of your data at any time by contacting us.</p>
+
+    <h2>6. Data Security</h2>
+    <p>We implement reasonable security measures to protect your information against unauthorized access, alteration, disclosure, or destruction. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If we discover that a child under 13 has provided us with personal information, we will promptly delete it. If you are a parent or guardian and believe your child has provided personal information, please contact us.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+        <li><strong>Right to Access:</strong> Request a copy of the data we hold about you.</li>
+        <li><strong>Right to Deletion:</strong> Request that we delete your personal data.</li>
+        <li><strong>Right to Opt-Out:</strong> Opt out of personalized advertising through your device settings (Settings → Google → Ads → Opt out of Ads Personalization).</li>
+        <li><strong>Right to Withdraw Consent:</strong> If you are in the EEA, you can change your ad consent preferences at any time through the App's settings.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the information below.</p>
+
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy periodically. When we make changes, we will update the "Last Updated" date at the top of this page and may notify you through the App. We encourage you to review this Privacy Policy regularly. Continued use of the App after changes constitutes acceptance of the updated Privacy Policy.</p>
+
+    <h2>10. California Privacy Rights (CCPA)</h2>
+    <p>If you are a California resident, you have the right to request disclosure of data collected and to opt out of the sale of your personal information. We do not sell personal information. For inquiries, contact us at the email below.</p>
+
+    <h2>11. International Users</h2>
+    <p>If you are accessing the App from outside the country where our servers are located, please be aware that your information may be transferred to, stored, and processed in a different jurisdiction. By using the App, you consent to such transfer and processing.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>If you have any questions or concerns about this Privacy Policy, or if you wish to exercise your data rights, please contact us at:</p>
+    <p>Email: <a href="mailto:support@fa9ssa.space">support@fa9ssa.space</a></p>
+
+</body>
+</html>
